@@ -17,7 +17,7 @@ export class HealthCheckContribution implements FrontendApplicationContribution 
         this.stateService.reachedState('ready').then(
             () => setInterval(() => {
                 console.log('****************');
-                fetch(`${endpoint.getRestUrl()}/webide-liveness`, {
+                fetch(`${endpoint.getRestUrl()}/api/keep-alive`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
