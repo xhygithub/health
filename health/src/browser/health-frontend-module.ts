@@ -7,6 +7,5 @@ import {FrontendApplicationContribution} from "@theia/core/lib/browser";
 import {HealthCheckContribution} from "./health-contribution";
 
 export default new ContainerModule(bind => {
-    // add your contribution bindings here
     bind(FrontendApplicationContribution).to(HealthCheckContribution);
 });
